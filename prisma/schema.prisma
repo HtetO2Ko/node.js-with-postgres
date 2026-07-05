@@ -27,29 +27,4 @@ model User {
   isDeleted     Boolean  @default(false)
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
-
-  diary         Diary[]
 }
-
-model Diary {
-  diaryID            String   @id @default(uuid())
-  previousDate       DateTime?
-  caseNo             String
-  caseType           String
-  clientName         String
-  todo               Json?
-  action             Json?
-  appointmentDate    DateTime
-  t1                 String?
-  t2                 String?
-  t3                 String?
-  t4                 String?
-  t5                 String?
-  isDeleted          Boolean  @default(false)
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
-
-  userid             String
-  user               User @relation(fields: [userid], references: [userid])
-}
-
