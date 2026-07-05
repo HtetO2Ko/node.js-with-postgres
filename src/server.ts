@@ -23,6 +23,6 @@ process.on("uncaughtException", (error: Error) => {
 
 server.listen(PORT, () => {
   console.log(
-    `🚀 Law Diary Server running on port ${PORT} in ${process.env.NODE_ENV || "development"} mode`,
+    `🚀 Server running on port ${PORT} in ${process.env.NODE_ENV || "development"} mode`,
   );
 });
